@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title>Titanic Survival Predictor</title>
+  </head>
+  <body style = "font-family: sans-serif; max-width: 600px; margin: auto;">
+
+    <h1>Titanic Survival Prediction</h1>
+
+    {% if prediction %}
+    <div style="color: #155724; border: 1px solid #c3e6cb; padding: 20px; margin-bottom: 20px; background-color: #d4edda;">
+      <h2>Prediction: {{prediction}}</h2>
+    </div>
+    {% endif %}
+
+    {% if error %}
+    <div style="color: #721c24; border: 1px solid #f5c6cb; padding: 20px; margin-bottom: 20px; background-color:#f8d7da;">
+      <h2>{{error}}</h2>
+    </div>
+    {% endif %}
+
+    <form action="/predict" method="POST">
+      <label for="Pclass">Pclass: </label><br>
+      <input type="number" name="Pclass" required><br><br>
+
+      <label for="Age">Age: </label><br>
+      <input type="number" step="any" name="Age" required><br><br>
+
+      <label for="SibSp">SibSp: </label><br>
+      <input type="number" name="SibSp" required><br><br>
+
+      <label for="Parch">Parch: </label><br>
+      <input type="number" name="Parch" required><br><br>
+
+      <label for="Fare">Fare: </label><br>
+      <input type="number" name="Fare" step="any" required><br><br>
+
+      <label for="Sex" >Sex: </label><br>
+      <select name="Sex" required>
+        <option value="male">male</option>
+        <option value="female">Female</option>
+      </select>
+
+      <label for="Embarked">Embarked: </label><br>
+      <select name="Embarked" required>
+        <option value="S">Southampton</option>
+        <option value="C">Cherbourg</option>
+        <option value="Q">Queenstown</option>
+      </select><br><br>
+
+      <button type="submit" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">Predict</button>
+      <a href="/" style="margin-left: 10px;">Clear Form</a>
+
+   </form>
+
+  </body>
+</html>
