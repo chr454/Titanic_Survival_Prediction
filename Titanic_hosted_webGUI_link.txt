@@ -1,0 +1,6 @@
+Name: Nwamata Ogochukwu Christiana
+Matric Number: 22CG031890
+Machine Learning Algorithm Used:Random Forest Classifier
+Model persistence method used: Joblib
+Live URL of the hosted application: https://dashboard.render.com/web/srv-d5oglcqli9vc73813vc0
+GitHub repository link:https://github.com/chr454/Titanic_Survival_Prediction
